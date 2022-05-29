@@ -54,7 +54,7 @@ export default function Home() {
       </Grid>
 
       <Grid className={classes.buildYourTeam} id="how">
-        <Grid>
+        <Grid class={classes.buildYourTeamContainer}>
           <Typography className={classes.h2}>Build your team</Typography>
           <Typography className={classes.buildYourTeamContent}>
             The JOYNR search engine elimates the use
@@ -102,34 +102,50 @@ export default function Home() {
             preferences.
           </Typography>
           <Typography>Stats last 10 games</Typography>
-          <img src={statsName} alt="statsName" />
+          {/* <img src={statsName} alt="statsName" /> */}
           <table className={classes.statsTable}>
             <tr className={classes.statsReport}>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Gender</th>
+              <td></td>
+              <th>Champs</th>
+              <th>Kills</th>
+              <th>Deaths</th>
+              <th>Assists</th>
+              <th>KDR</th>
+              <th>Played</th>
             </tr>
             <tr className={classes.statsReport}>
-              <td>Anom</td>
-              <td>19</td>
-              <td>Male</td>
+              <td>Image</td>
+              <td>Image</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
             </tr>
             <tr className={classes.statsReport}>
-              <td>Megha</td>
-              <td>19</td>
-              <td>Female</td>
+              <td>Image</td>
+              <td>Image</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
             </tr>
-            <tr className={classes.statsReport}>
-              <td>Subham</td>
-              <td>25</td>
-              <td>Male</td>
+            <tr className={classes.statsReport} style={{backgroundImage: "linearGradient(to top, rgba(0,0,0,0), rgba(15, 23, 34, 1))"}}>
+              <td>Image</td>
+              <td>Image</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
+              <td>xxx</td>
             </tr>
           </table>
         </Grid>
       </Grid>
 
       <Grid className={classes.createProfile}>
-        <img src={purpleWave} alt="Purple Wave" />
+        <img src={purpleWave} alt="Purple Wave" className="purpleWaveImg"/>
       </Grid>
       <Grid className={classes.threeCircleGrid}>
         <Typography className={classes.howToGetStarted}>
@@ -251,7 +267,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     marginTop: "0",
-    fontSize: "48px",
+    fontSize: "2rem",
     lineHeight: "120%",
     marginBottom: "30px",
     fontFamily: "DM Sans",
@@ -274,11 +290,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   ladyWithSword: {
-    width: "424px",
-    height: "502px",
-    left: "65%",
+    left: "70vw",
+    top: "14vw",
+    width: "25rem",
     cursor: "pointer",
-    zIndex: "101",
+    zIndex: "99",
+    position: "absolute",
   },
 
   waveTop: {
@@ -289,23 +306,21 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    fontFamily: "DM Sans",
-    zIndex: "1000",
+    top: "42%",
+    left: "5rem",
+    zIndex: 1000,
     position: "absolute",
-    top: "500px",
-    left: "100px",
+    fontFamily: "DM Sans",
   },
   signUpBtnn: {
     fontFamily: "DM Sans",
     paddingTop: "2em",
   },
-
-  statsTable: {},
-
   h2: {
     fontFamily: "DM Sans",
     fontSize: "36px",
     fontWeight: "bold",
+    marginBottom: "40px",
   },
   h4: {
     fontFamily: "DM Sans",
@@ -345,8 +360,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   buildYourTeamContainer: {
-    display: "flex",
-    flexDirection: "row",
+    textAlign: "left",
+    paddingLeft: "2rem",
+    flexDirection: "column",
   },
 
   buildYourTeam: {
@@ -354,36 +370,31 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     marginTop: "150px",
     textAlign: "left",
-    alignItems: "center",
-    justifyContent: "spaceAround",
-    paddingLeft: "8em",
+    justifyContent: "space-around",
   },
   find_your_tm_left: {
-    fontFamily: "DM Sans",
-    paddingLeft: "200px",
-    zIndex: "100",
     height: "50%",
-    // transform:'scale(0.6)',
-    transform: "translatex(3em) scale(0.7)",
+    zIndex: 100,
+    transform: "scale(0.7)",
+    fontFamily: "DM Sans",
+    padding: 0,
   },
   find_your_tm_middle: {
     fontFamily: "DM Sans",
     zIndex: "200",
     position: "absolute",
     height: "50%",
-    transform: "translatex(25em) ",
     paddingBottom: "2em",
   },
   find_your_tm_right: {
-    paddingRight: "200px",
-    fontFamily: "DM Sans",
-    zIndex: "100",
     height: "50%",
-    transform: "translatex(-14em) scale(0.7)",
+    zIndex: 100,
+    fontFamily: "DM Sans",
+    padding: 0,
+    transform: "scale(0.7)",
   },
   jungleBackground: {
     backgroundImage: "url(" + jungleBackground + ")",
-
     borderRadius: "50%",
     height: "523px",
     width: "523px",
@@ -401,21 +412,31 @@ const useStyles = makeStyles((theme) => ({
   howToGetStarted: {
     fontSize: "36px",
     fontWeight: "bold",
+    marginLeft: "4rem",
   },
-
   screen: {
+    height: "20rem",
+    width: "30rem",
     display: "flex",
+    transform: "scale(0.7)",
     flexDirection: "row",
-    height: "244px",
-    width: "437px",
+    justifyContent: "center",
+  },
+  statsTable: {
+    width: "100%",
+    marginTop: "6rem",
   },
   statsReport: {
-    backgroundImage: "url(" + statsR + ")",
+    backgroundColor: "rgba(15, 23, 34, 1)",
     width: "387px",
     height: "74px",
   },
+
   threeCircleGrid: {
-    height: "990px",
+    height: "40rem",
+  },
+  purpleWaveImg: {
+    width:"100vw",
   },
   connectImg: {
     borderRadius: "50%",
@@ -429,7 +450,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "18em",
+    paddingTop: "8em",
   },
   rightRoundBackground: {
     bordeRadius: "50%",
