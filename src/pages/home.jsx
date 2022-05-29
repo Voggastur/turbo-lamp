@@ -306,7 +306,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    top: "42%",
+    top: "45%",
     left: "5rem",
     zIndex: 1000,
     position: "absolute",
