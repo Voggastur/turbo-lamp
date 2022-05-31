@@ -41,7 +41,7 @@ export default function Home() {
             FORGET ABOUT RANDOM MATCHMAKING <br />
             TAKE CONTROL OVER YOUR GAMING EXPERINCES.
           </Typography>
-            <button className={classes.signUpBtnn} >SIGN UP</button>
+            <button onclick="signUp()" style={{marginTop: "2rem"}} className={classes.signUpBtn} >SIGN UP</button>
         </Grid>
       </Grid>
 
@@ -298,20 +298,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    top: "36vw",
+    top: "44%",
     left: "5rem",
     zIndex: 1000,
     position: "absolute",
     fontFamily: "DM Sans",
-  },
-  signUpBtnn: {
-    fontFamily: "DM Sans",
-    fontSize: "1.4rem",
-    marginTop: "2em",
-    width: "15rem",
-    height: "4rem",
-    borderRadius: "4rem",
-    cursor: "pointer",
   },
   h2: {
     fontFamily: "DM Sans",
