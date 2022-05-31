@@ -2,16 +2,11 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import backgroudImage from "../img/newLandingPageBackground.png";
-import backgroudImage2 from "../img/newLandingPageBackground2.png";
 import waveTop from "../img/wavetop.svg";
-import signUpBtn from "../img/signUpBtn.svg";
 import ladyWithSword from "../img/ladyWithSword.png";
 import screen from "../img/screen.png";
 import jungleBackground from "../img/jungleBackground.png";
 import dudeavatar from "../img/dudeAvatar 1.png";
-import statsName from "../img/statsName.svg";
-import statsR from "../img/statsR.svg";
-import RoundBackground from "../img/RoundBackground.svg";
 import connectImg from "../img/connectImg.svg";
 import signUp from "../img/signUp.svg";
 import leftRoundImg from "../img/leftRoundImg.svg";
@@ -19,7 +14,6 @@ import MiddleRoundImg from "../img/middleRoundImg.svg";
 import RightRoundImg from "../img/rightRoundImg.svg";
 import logo from "../img/logo.png";
 import purpleWave from "../img/purplewave.svg";
-
 
 export default function Home() {
   const classes = useStyles();
@@ -47,9 +41,7 @@ export default function Home() {
             FORGET ABOUT RANDOM MATCHMAKING <br />
             TAKE CONTROL OVER YOUR GAMING EXPERINCES.
           </Typography>
-          <Grid className={classes.signUpBtnn}>
-            <img src={signUpBtn} />
-          </Grid>
+            <button className={classes.signUpBtnn} >SIGN UP</button>
         </Grid>
       </Grid>
 
@@ -290,9 +282,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   ladyWithSword: {
-    top: "17vw",
+    top: "13vw",
     left: "70vw",
-    width: "29vh",
+    maxWidth: "fit-content",
     cursor: "pointer",
     zIndex: "99",
     position: "absolute",
@@ -306,7 +298,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    top: "40vw",
+    top: "36vw",
     left: "5rem",
     zIndex: 1000,
     position: "absolute",
@@ -314,7 +306,12 @@ const useStyles = makeStyles((theme) => ({
   },
   signUpBtnn: {
     fontFamily: "DM Sans",
-    paddingTop: "2em",
+    fontSize: "1.4rem",
+    marginTop: "2em",
+    width: "15rem",
+    height: "4rem",
+    borderRadius: "4rem",
+    cursor: "pointer",
   },
   h2: {
     fontFamily: "DM Sans",
