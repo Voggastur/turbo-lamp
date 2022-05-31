@@ -290,9 +290,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   ladyWithSword: {
-    top: "16vw",
-    left: "68vw",
-    width: "23rem",
+    top: "17vw",
+    left: "70vw",
+    width: "29vh",
     cursor: "pointer",
     zIndex: "99",
     position: "absolute",
@@ -509,7 +509,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundRepeat: "round",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
     backgroundImage: "url(" + backgroudImage + ")",
     width: "100%",
     height: "857px",
