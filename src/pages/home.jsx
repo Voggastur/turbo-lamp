@@ -145,7 +145,7 @@ export default function Home() {
       </Grid>
 
       <Grid className={classes.createProfile}>
-        <img src={purpleWave} alt="Purple Wave" className="purpleWaveImg"/>
+        <img src={purpleWave} alt="Purple Wave" width="100%" className="purpleWaveImg"/>
       </Grid>
       <Grid className={classes.threeCircleGrid}>
         <Typography className={classes.howToGetStarted}>
@@ -290,9 +290,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   ladyWithSword: {
-    left: "70vw",
-    top: "14vw",
-    width: "25rem",
+    top: "16vw",
+    left: "68vw",
+    width: "23rem",
     cursor: "pointer",
     zIndex: "99",
     position: "absolute",
@@ -306,7 +306,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    top: "45%",
+    top: "40vw",
     left: "5rem",
     zIndex: 1000,
     position: "absolute",
@@ -509,6 +509,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundRepeat: "round",
     backgroundImage: "url(" + backgroudImage + ")",
     width: "100%",
     height: "857px",
