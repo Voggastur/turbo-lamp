@@ -57,9 +57,6 @@ return  (
    <Typography key="Email" component="a" href="mailto:support@joynr.co"  className={classes.eMail}>support@joynr.co</Typography>
   </Grid>
 
-
-
-  
   </Grid>
   </Grid>
 
@@ -87,10 +84,13 @@ socialPurple:{
 },
 
 mainGrid:{
-display:'flex',
-flowDirection:'row',
-justifyContent:'center',
-alignItems:'center'
+  backgroundImage: "url(" + socialPurple + ")",
+  backgroundRepeat:'no-repeat',
+  backgroundPosition: '25% -73%',
+  display:'flex',
+  flowDirection:'row',
+  justifyContent:'center',
+  alignItems:'center'
 },
 letsConnectGrid:{
 

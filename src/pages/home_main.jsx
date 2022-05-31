@@ -54,7 +54,7 @@ export default function Home() {
       </Grid>
 
       <Grid className={classes.buildYourTeam} id="how">
-        <Grid class={classes.buildYourTeamContainer}>
+        <Grid>
           <Typography className={classes.h2}>Build your team</Typography>
           <Typography className={classes.buildYourTeamContent}>
             The JOYNR search engine elimates the use
@@ -102,50 +102,34 @@ export default function Home() {
             preferences.
           </Typography>
           <Typography>Stats last 10 games</Typography>
-          {/* <img src={statsName} alt="statsName" /> */}
+          <img src={statsName} alt="statsName" />
           <table className={classes.statsTable}>
             <tr className={classes.statsReport}>
-              <td></td>
-              <th>Champs</th>
-              <th>Kills</th>
-              <th>Deaths</th>
-              <th>Assists</th>
-              <th>KDR</th>
-              <th>Played</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
             </tr>
             <tr className={classes.statsReport}>
-              <td>Image</td>
-              <td>Image</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
+              <td>Anom</td>
+              <td>19</td>
+              <td>Male</td>
             </tr>
             <tr className={classes.statsReport}>
-              <td>Image</td>
-              <td>Image</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
+              <td>Megha</td>
+              <td>19</td>
+              <td>Female</td>
             </tr>
-            <tr className={classes.statsReport} style={{backgroundImage: "linearGradient(to top, rgba(0,0,0,0), rgba(15, 23, 34, 1))"}}>
-              <td>Image</td>
-              <td>Image</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
-              <td>xxx</td>
+            <tr className={classes.statsReport}>
+              <td>Subham</td>
+              <td>25</td>
+              <td>Male</td>
             </tr>
           </table>
         </Grid>
       </Grid>
 
       <Grid className={classes.createProfile}>
-        <img src={purpleWave} alt="Purple Wave" className="purpleWaveImg"/>
+        <img src={purpleWave} alt="Purple Wave" />
       </Grid>
       <Grid className={classes.threeCircleGrid}>
         <Typography className={classes.howToGetStarted}>
@@ -222,6 +206,7 @@ export default function Home() {
                 className={classes.about}
                 to="/about"
                 rel="noopener noreferrer"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 About
               </Link>
@@ -231,6 +216,7 @@ export default function Home() {
                 className={classes.about}
                 to="/PrivacyPolicy"
                 rel="noopener noreferrer"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Privacy policy
               </Link>
@@ -267,7 +253,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     marginTop: "0",
-    fontSize: "2rem",
+    fontSize: "48px",
     lineHeight: "120%",
     marginBottom: "30px",
     fontFamily: "DM Sans",
@@ -290,12 +276,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   ladyWithSword: {
-    left: "70vw",
-    top: "14vw",
-    width: "25rem",
+    width: "424px",
+    height: "502px",
+    left: "65%",
     cursor: "pointer",
-    zIndex: "99",
-    position: "absolute",
+    zIndex: "101",
   },
 
   waveTop: {
@@ -306,21 +291,23 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10em",
   },
   WaveText: {
-    top: "45%",
-    left: "5rem",
-    zIndex: 1000,
-    position: "absolute",
     fontFamily: "DM Sans",
+    zIndex: "1000",
+    position: "absolute",
+    top: "500px",
+    left: "100px",
   },
   signUpBtnn: {
     fontFamily: "DM Sans",
     paddingTop: "2em",
   },
+
+  statsTable: {},
+
   h2: {
     fontFamily: "DM Sans",
     fontSize: "36px",
     fontWeight: "bold",
-    marginBottom: "40px",
   },
   h4: {
     fontFamily: "DM Sans",
@@ -360,9 +347,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   buildYourTeamContainer: {
-    textAlign: "left",
-    paddingLeft: "2rem",
-    flexDirection: "column",
+    display: "flex",
+    flexDirection: "row",
   },
 
   buildYourTeam: {
@@ -370,31 +356,36 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     marginTop: "150px",
     textAlign: "left",
-    justifyContent: "space-around",
+    alignItems: "center",
+    justifyContent: "spaceAround",
+    paddingLeft: "8em",
   },
   find_your_tm_left: {
-    height: "50%",
-    zIndex: 100,
-    transform: "scale(0.7)",
     fontFamily: "DM Sans",
-    padding: 0,
+    paddingLeft: "200px",
+    zIndex: "100",
+    height: "50%",
+    // transform:'scale(0.6)',
+    transform: "translatex(3em) scale(0.7)",
   },
   find_your_tm_middle: {
     fontFamily: "DM Sans",
     zIndex: "200",
     position: "absolute",
     height: "50%",
+    transform: "translatex(25em) ",
     paddingBottom: "2em",
   },
   find_your_tm_right: {
-    height: "50%",
-    zIndex: 100,
+    paddingRight: "200px",
     fontFamily: "DM Sans",
-    padding: 0,
-    transform: "scale(0.7)",
+    zIndex: "100",
+    height: "50%",
+    transform: "translatex(-14em) scale(0.7)",
   },
   jungleBackground: {
     backgroundImage: "url(" + jungleBackground + ")",
+
     borderRadius: "50%",
     height: "523px",
     width: "523px",
@@ -412,31 +403,22 @@ const useStyles = makeStyles((theme) => ({
   howToGetStarted: {
     fontSize: "36px",
     fontWeight: "bold",
-    marginLeft: "4rem",
+    paddingLeft:'4em'
   },
+
   screen: {
-    height: "20rem",
-    width: "30rem",
     display: "flex",
-    transform: "scale(0.7)",
     flexDirection: "row",
-    justifyContent: "center",
-  },
-  statsTable: {
-    width: "100%",
-    marginTop: "6rem",
+    height: "244px",
+    width: "437px",
   },
   statsReport: {
-    backgroundColor: "rgba(15, 23, 34, 1)",
+    backgroundImage: "url(" + statsR + ")",
     width: "387px",
     height: "74px",
   },
-
   threeCircleGrid: {
-    height: "40rem",
-  },
-  purpleWaveImg: {
-    width:"100vw",
+    height: "990px",
   },
   connectImg: {
     borderRadius: "50%",
@@ -450,7 +432,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "8em",
+    paddingTop: "18em",
   },
   rightRoundBackground: {
     bordeRadius: "50%",
